@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "internet",
-    "slug": "internet",
+    "name": "Internet Pages",
+    "slug": "Internet",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,35 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.internet.pages"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to allow you to add images to products.",
+          "cameraPermission": "The app accesses your camera to allow you to take photos to use as images for your products."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#ffffff"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "218848e7-f005-4190-b6c8-19f6da8e502b"
+      }
     }
   }
 }
